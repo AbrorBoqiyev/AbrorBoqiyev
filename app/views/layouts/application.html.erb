@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <%= render 'layouts/navbar'%>
+      <%= yield %>
+    </main>
+    <footer class='d-flex gap-5 justify-content-end mt-5 p-2 bg-light' >
+      <a href="#" class='btn'>Contacts</a>
+      <a href="#" class='btn'>Profile</a>
+      <a href="#" class='btn'>Service</a>
+    </footer>
   </body>
 </html>
