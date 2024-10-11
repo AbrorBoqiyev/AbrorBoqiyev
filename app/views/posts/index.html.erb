@@ -2,7 +2,7 @@
 <div class="container bg-light rounded">
   <div class="d-flex justify-content-between align-items-center">
     <h1>Posts</h1>
-    <%= link_to "New post", new_post_path %>
+    <%= link_to "New post", new_post_path, class: "btn btn-outline-warning" %>
   </div>
 
   <div class="row">
@@ -11,7 +11,7 @@
       <div class="rounded p-2 px-3 text-light bg-secondary">
         <%= render post %>
         <p>
-          <%= link_to "Show this post", post %>
+          <%= link_to "Show this post", post, class: "btn btn-outline-primary py-0" %>
         </p>
       </div>
     </div>
@@ -19,3 +19,9 @@
   </div>
 
 </div>
+
+<style>
+  .container{
+    box-shadow: 1px 1px 5px gray;
+  }
+</style>
