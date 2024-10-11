@@ -13,8 +13,11 @@
   </head>
 
   <body>
-    <main>
+    <header>
       <%= render 'layouts/navbar'%>
+      <%= render 'layouts/alerts' %>
+    </header>
+    <main>
       <%= yield %>
     </main>
     <footer  class='d-flex gap-5 justify-content-end mt-5 p-2 bg-secondary'>
