@@ -1,5 +1,14 @@
-
-  <h3><%= post.title %></h3>
-
+<div id="<%= dom_id post %>">
+  <h4> <%= post.title %></h4>
+  <div>
     <%= post.body %>
+  </div>
 
+  <h6> <%= pluralize(post.views, "view") %> </h6>
+
+</div>
+<style>
+  h6{
+    color: lightgreen;
+  }
+</style>
