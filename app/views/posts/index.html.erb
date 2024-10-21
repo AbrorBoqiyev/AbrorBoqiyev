@@ -1,14 +1,32 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class=" cover container my-4 p-4 bg-light rounded ">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h1>Posts</h1>
+    <%= link_to "New post", new_post_path, class: "btn btn-outline-secondary" %>
+  </div>
+  <div class="row">
+      <% @posts.each do |post| %>
+        <div class="col-sm-4">
+          <div class="post  my-2 py-2 px-5 rounded ">
+            <%= render post %>
+            <p>
+              <%= link_to "Show this post", post, class: "btn btn-outline-primary py-1" %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+  </div>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<style>
+  .cover{
+    box-shadow: 1px 1px 5px gray;
+  }
+  .post{
+    background: linear-gradient(to right bottom, lightblue, lightgray, rgb(248, 250, 250));
+    color: #333;
+    box-shadow: 1px 1px 5px gray;
+  }
+</style>
