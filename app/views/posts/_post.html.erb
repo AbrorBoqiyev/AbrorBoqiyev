@@ -1,9 +1,13 @@
 <div id="<%= dom_id post %>">
   
   <h3><%= post.title %></h3>  
-  
+  <h6><%= pluralize(post.views, 'view' )%></h6>
   <p>
     <%= post.body %>
   </p>
 
 </div>
+
+<style>
+  h6{color: green;}
+</style>
