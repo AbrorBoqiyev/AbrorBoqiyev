@@ -12,7 +12,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @post.increment!(:views)
-    @comments = @post.comments
   end
 
   # GET /posts/new
