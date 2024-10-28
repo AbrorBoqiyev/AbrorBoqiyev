@@ -9,6 +9,20 @@
   </div>
 </div>
 
+<div class="container">
+  <%= render "comments/form", post: @post %>
+  <% @comments.each do |comment| %>
+    <%= render "comments/comment", post: @post, comment: comment %>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
 <style>
   .cover {
       box-shadow: 1px 1px 5px #222;
